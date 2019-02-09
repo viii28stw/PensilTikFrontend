@@ -42,6 +42,9 @@ public class LoginController implements Initializable {
     @FXML
     private JFXCheckBox jchxLembrarDeMim;
 
+    private static RequiredFieldValidator emailValidatorCampoObrigatorio = new RequiredFieldValidator();
+    private static RequiredFieldValidator senhaValidatorCampoObrigatorio = new RequiredFieldValidator();
+
     private static LoginController uniqueInstance;
 
     public static synchronized LoginController getInstance() {
@@ -53,19 +56,21 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        RequiredFieldValidator emailValidator = new RequiredFieldValidator();
-        RequiredFieldValidator senhaValidator = new RequiredFieldValidator();
+        emailValidatorCampoObrigatorio.setMessage("Email: Campo obrigatório");
+        senhaValidatorCampoObrigatorio.setMessage("Senha: Campo obrigatório");
 
-        jtxEmail.getValidators().add(emailValidator);
-        jpwSenha.getValidators().add(senhaValidator);
+        Image errorIcon = new Image(MainApp.class
+                .getResource("/image/validator-error.png").toString());
 
-        emailValidator.setMessage("Email: Campo obrigatório");
-        senhaValidator.setMessage("Senha: Campo obrigatório");
+        emailValidatorCampoObrigatorio.setIcon(new ImageView(errorIcon));
+        senhaValidatorCampoObrigatorio.setIcon(new ImageView(errorIcon));
 
         jtxEmail.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 if (!newValue) {
+                    jtxEmail.getValidators().clear();
+                    jtxEmail.getValidators().add(emailValidatorCampoObrigatorio);
                     jtxEmail.validate();
                 }
             }
@@ -74,15 +79,12 @@ public class LoginController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 if (!newValue) {
+                    jpwSenha.getValidators().clear();
+                    jpwSenha.getValidators().add(senhaValidatorCampoObrigatorio);
                     jpwSenha.validate();
                 }
             }
         });
-
-        Image errorIcon = new Image(MainApp.class
-                .getResource("/image/validator-error.png").toString());
-        emailValidator.setIcon(new ImageView(errorIcon));
-        senhaValidator.setIcon(new ImageView(errorIcon));
 
     }
 
@@ -125,6 +127,11 @@ public class LoginController implements Initializable {
 
     @FXML
     private void jbtnEntrarOnAction() {
+        jtxEmail.getValidators().clear();
+        jtxEmail.getValidators().add(emailValidatorCampoObrigatorio);
+        jpwSenha.getValidators().clear();
+        jpwSenha.getValidators().add(senhaValidatorCampoObrigatorio);
+
         if (!jtxEmail.validate() && !jpwSenha.validate()) {
             jtxEmail.requestFocus();
             return;

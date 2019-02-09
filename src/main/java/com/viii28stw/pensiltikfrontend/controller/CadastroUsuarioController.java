@@ -53,7 +53,8 @@ public class CadastroUsuarioController implements Initializable {
     private Label lblConfirmarSenha;
     @FXML
     private ImageView imgvwConfirmarSenha;
-    private RequiredFieldValidator confirmarSenhaValidator3 = new RequiredFieldValidator();
+
+    private RequiredFieldValidator confirmarSenhaValidatorCampoObrigatorio = new RequiredFieldValidator();
 
     @Setter
     private Stage formStage;
@@ -71,17 +72,20 @@ public class CadastroUsuarioController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        lblSexoObrigatorio.setVisible(false);
-        imgvwSexoObrigatorio.setVisible(false);
-        lblSexoObrigatorio.setStyle("-fx-text-fill: #c00d0d;");
+        confirmarSenhaValidatorCampoObrigatorio.setMessage("Confirmar Senha: Campo obrigatório!");
 
-        lblEmailInvalido.setVisible(false);
-        imgvwEmailInvalido.setVisible(false);
-        lblEmailInvalido.setStyle("-fx-text-fill: #c00d0d;");
 
-        lblConfirmarSenha.setVisible(false);
-        imgvwConfirmarSenha.setVisible(false);
-        lblConfirmarSenha.setStyle("-fx-text-fill: #c00d0d;");
+//        lblSexoObrigatorio.setVisible(false);
+//        imgvwSexoObrigatorio.setVisible(false);
+//        lblSexoObrigatorio.setStyle("-fx-text-fill: #c00d0d;");
+//
+//        lblEmailInvalido.setVisible(false);
+//        imgvwEmailInvalido.setVisible(false);
+//        lblEmailInvalido.setStyle("-fx-text-fill: #c00d0d;");
+//
+//        lblConfirmarSenha.setVisible(false);
+//        imgvwConfirmarSenha.setVisible(false);
+//        lblConfirmarSenha.setStyle("-fx-text-fill: #c00d0d;");
 
         RequiredFieldValidator nomeValidator = new RequiredFieldValidator();
         RequiredFieldValidator sobrenomeValidator = new RequiredFieldValidator();
@@ -89,32 +93,43 @@ public class CadastroUsuarioController implements Initializable {
         RequiredFieldValidator senhaValidator = new RequiredFieldValidator();
         RequiredFieldValidator confirmarSenhaValidator = new RequiredFieldValidator();
 
-        confirmarSenhaValidator3.setMessage("Confirmar nhase: Campo obrigatório");
-        jpwConfirmarSenha.getValidators().add(confirmarSenhaValidator3);
+
 
         jtxNome.getValidators().add(nomeValidator);
         jtxSobrenome.getValidators().add(sobrenomeValidator);
         jtxEmail.getValidators().add(emailValidator);
         jpwSenha.getValidators().add(senhaValidator);
+
+        confirmarSenhaValidator.setMessage("Confirmar Senha: Campo obrigatório");
+        jpwConfirmarSenha.getValidators().add(confirmarSenhaValidator);
+
+
+        confirmarSenhaValidator.setMessage("Confirmar Senha: Outro obrigatório");
         jpwConfirmarSenha.getValidators().add(confirmarSenhaValidator);
 
         nomeValidator.setMessage("Nome: Campo obrigatório");
         sobrenomeValidator.setMessage("Sobrenome: Campo obrigatório");
         emailValidator.setMessage("E-mail: Campo obrigatório");
         senhaValidator.setMessage("Senha: Campo obrigatório");
-        confirmarSenhaValidator.setMessage("Confirmar Senha: Campo obrigatório");
-
-
-
 
     }
 
     @FXML
     private void jbtnSalvarAction() {
+        jpwConfirmarSenha.getValidators().forEach(validatorBase -> {
+            System.out.println(validatorBase.getMessage());
+        });
 
-        jpwConfirmarSenha.getValidators();
 
 
+        System.out.println("Após a limpa");
+
+        jpwConfirmarSenha.getValidators().forEach(validatorBase -> {
+            System.out.println(validatorBase.getMessage());
+        });
+
+        jpwConfirmarSenha.getValidators().clear();
+        jpwConfirmarSenha.getValidators().add(confirmarSenhaValidatorCampoObrigatorio);
         jpwConfirmarSenha.validate();
     }
 
