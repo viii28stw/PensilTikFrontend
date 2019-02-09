@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.eighttwentyeightsoftware</groupId>
+    <groupId>com.viii28stw</groupId>
     <artifactId>pensiltikfrontend</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -114,7 +114,7 @@
             <version>2.9.5</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.eighttwentyeightsoftware</groupId>-->
+            <!--<groupId>com.viii28stw</groupId>-->
             <!--<artifactId>maskedjfxtextfield</artifactId>-->
             <!--<version>1.0</version>-->
         <!--</dependency>-->
@@ -144,7 +144,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.eighttwentyeightsoftware.pensiltikfrontend.MainApp</mainClass>
+                    <mainClass>com.viii28stw.pensiltikfrontend.MainApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
