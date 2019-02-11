@@ -42,8 +42,8 @@ public class LoginController implements Initializable {
     @FXML
     private JFXCheckBox jchxLembrarDeMim;
 
-    private static RequiredFieldValidator emailValidatorCampoObrigatorio = new RequiredFieldValidator();
-    private static RequiredFieldValidator senhaValidatorCampoObrigatorio = new RequiredFieldValidator();
+    private static final RequiredFieldValidator emailValidatorCampoObrigatorio = new RequiredFieldValidator();
+    private static final RequiredFieldValidator senhaValidatorCampoObrigatorio = new RequiredFieldValidator();
 
     private static LoginController uniqueInstance;
 
@@ -59,11 +59,11 @@ public class LoginController implements Initializable {
         emailValidatorCampoObrigatorio.setMessage("Email: Campo obrigatório");
         senhaValidatorCampoObrigatorio.setMessage("Senha: Campo obrigatório");
 
-        Image errorIcon = new Image(MainApp.class
-                .getResource("/image/validator-error.png").toString());
+//        Image errorIcon = new Image(MainApp.class
+//                .getResource("/image/validator-error.png").toString());
 
-        emailValidatorCampoObrigatorio.setIcon(new ImageView(errorIcon));
-        senhaValidatorCampoObrigatorio.setIcon(new ImageView(errorIcon));
+//        emailValidatorCampoObrigatorio.setIcon(new ImageView(errorIcon));
+//        senhaValidatorCampoObrigatorio.setIcon(new ImageView(errorIcon));
 
         jtxEmail.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
