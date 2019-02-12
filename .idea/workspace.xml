@@ -6,22 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java" line="141" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java" line="148" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62ceace0-e481-4169-a8dc-523a336deac0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/util/EmailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d68409eff9e451ee1c9b8d2466d137c2c416180" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d68409eff9e451ee1c9b8d2466d137c2c416180" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2b30a99c9579eb86cb483dfb92c7a16226926a2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2b30a99c9579eb86cb483dfb92c7a16226926a2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cadastro-usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cadastro-usuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/viii28stw/pensiltikfrontend/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/viii28stw/pensiltikfrontend/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/cadastro-usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/cadastro-usuario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +24,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="180" column="57" selection-start-line="180" selection-start-column="57" selection-end-line="180" selection-end-column="57" />
+            <state relative-caret-position="348">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +102,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/model/entity/Usuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/DespesaEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/MenuEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/SplashScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/ajuda/SobreController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/service/UsuarioServiceImpl.java" />
@@ -110,6 +115,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/view/cadastro-usuario.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/util/EmailValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java" />
       </list>
     </option>
   </component>
@@ -172,6 +178,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pensiltikfrontend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PensilTikFrontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PensilTikFrontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pensiltikfrontend" type="462c0819:PsiDirectoryNode" />
+              <item name="enumeration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PensilTikFrontend" type="b2602c69:ProjectViewProjectNode" />
@@ -280,7 +295,7 @@
     <frame x="-6" y="-6" width="1293" height="733" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2672065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -288,7 +303,7 @@
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49959514" weight="0.3283582" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49959514" weight="0.2106136" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49959514" visible="true" weight="0.2106136" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.17910448" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -305,7 +320,7 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2672065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -404,16 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -599,8 +604,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/controller/CadastroUsuarioController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="180" column="57" selection-start-line="180" selection-start-column="57" selection-end-line="180" selection-end-column="57" />
+        <state relative-caret-position="348">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/viii28stw/pensiltikfrontend/enumeration/SexoEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

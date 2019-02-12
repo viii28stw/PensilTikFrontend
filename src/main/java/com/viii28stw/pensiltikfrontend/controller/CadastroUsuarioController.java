@@ -13,6 +13,8 @@ import com.jfoenix.validation.RequiredFieldValidator;
 import com.viii28stw.pensiltikfrontend.util.EmailValidator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -52,6 +54,8 @@ public class CadastroUsuarioController implements Initializable {
     private static final RequiredFieldValidator emailValidatorCampoObrigatorio = new RequiredFieldValidator();
     private static final RequiredFieldValidator senhaValidatorCampoObrigatorio = new RequiredFieldValidator();
     private static final RequiredFieldValidator confirmarSenhaValidatorCampoObrigatorio = new RequiredFieldValidator();
+
+    private final ObservableList<SexoEnum> obsListSexo = FXCollections.observableArrayList();
 
     @FXML
     private Label lblSexoSelecaoObrigatorio;
@@ -101,6 +105,9 @@ public class CadastroUsuarioController implements Initializable {
         lblConfirmarSenhaNaoCorresponde.setVisible(false);
         lblConfirmarSenhaNaoCorresponde.setStyle("-fx-text-fill: #c00d0d;");
         imgvwConfirmarSenhaNaoCorresponde.setVisible(false);
+
+        SexoEnum.list().forEach(obsListSexo::add);
+        jcbxSexo.setItems(obsListSexo);
 
         jtxNome.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
