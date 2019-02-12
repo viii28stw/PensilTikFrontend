@@ -213,6 +213,33 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void jbtnLimparAction() {
+        this.setModoEdicao(false);
+
+        jtxNome.resetValidation();
+        jtxSobrenome.resetValidation();
+
+        lblSexoSelecaoObrigatorio.setVisible(false);
+        imgvwSexoSelecaoObrigatorio.setVisible(false);
+
+        jtxEmail.resetValidation();
+        lblEmailInvalido.setVisible(false);
+        imgvwEmailInvalido.setVisible(false);
+
+        jpwSenha.resetValidation();
+        jpwConfirmarSenha.resetValidation();
+        lblConfirmarSenhaNaoCorresponde.setVisible(false);
+        imgvwConfirmarSenhaNaoCorresponde.setVisible(false);
+
+        jtxNome.clear();
+        jtxSobrenome.clear();
+        jcbxSexo.getSelectionModel().select(null);
+        jtxEmail.clear();
+        jpwSenha.clear();
+        jpwConfirmarSenha.clear();
+
+        jtxNome.requestFocus();
+
+        jbtnSalvar.setText("SALVAR");
 
     }
 
