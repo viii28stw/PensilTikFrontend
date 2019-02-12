@@ -4,12 +4,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.validation.ValidationFacade;
+import com.viii28stw.pensiltikfrontend.enumeration.MenuEnum;
 import com.viii28stw.pensiltikfrontend.enumeration.SexoEnum;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
+import com.viii28stw.pensiltikfrontend.model.domain.FormMenu;
 import com.viii28stw.pensiltikfrontend.util.EmailValidator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -46,7 +48,7 @@ public class CadastroUsuarioController implements Initializable {
     private JFXButton jbtnLimpar;
     @FXML
     private JFXButton jbtnFechar;
-    @Setter
+
     private boolean modoEdicao;
 
     private static final RequiredFieldValidator nomeValidatorCampoObrigatorio = new RequiredFieldValidator();
@@ -213,7 +215,7 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void jbtnLimparAction() {
-        this.setModoEdicao(false);
+        modoEdicao = false;
 
         jtxNome.resetValidation();
         jtxSobrenome.resetValidation();
@@ -245,7 +247,7 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void jbtnFecharAction() {
-
+        formStage.close();
     }
 
 }

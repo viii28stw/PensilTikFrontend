@@ -59,6 +59,10 @@ public class LoginController implements Initializable {
         emailValidatorCampoObrigatorio.setMessage("Email: Campo obrigatório");
         senhaValidatorCampoObrigatorio.setMessage("Senha: Campo obrigatório");
 
+        jtxEmail.getValidators().add(emailValidatorCampoObrigatorio);
+        jpwSenha.getValidators().add(senhaValidatorCampoObrigatorio);
+
+
 //        Image errorIcon = new Image(MainApp.class
 //                .getResource("/image/validator-error.png").toString());
 
@@ -68,9 +72,7 @@ public class LoginController implements Initializable {
         jtxEmail.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if (!newValue) {
-                    jtxEmail.getValidators().clear();
-                    jtxEmail.getValidators().add(emailValidatorCampoObrigatorio);
+                if (oldValue) {
                     jtxEmail.validate();
                 }
             }
@@ -78,9 +80,7 @@ public class LoginController implements Initializable {
         jpwSenha.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if (!newValue) {
-                    jpwSenha.getValidators().clear();
-                    jpwSenha.getValidators().add(senhaValidatorCampoObrigatorio);
+                if (oldValue) {
                     jpwSenha.validate();
                 }
             }
@@ -108,7 +108,10 @@ public class LoginController implements Initializable {
         try {
             Stage cadastroUsuarioStage = new Stage();
             Stage loginStage = (Stage) jtxEmail.getScene().getWindow();
-            StackPane cadastroUsuarioStackPane = FXMLLoader.load(MainApp.class.getResource("/view/cadastro-usuario.fxml"));
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/view/cadastro-usuario.fxml"));
+            StackPane cadastroUsuarioStackPane = (StackPane) loader.load();
             Scene scene = new Scene(cadastroUsuarioStackPane);
 //                cadastroUsuarioStage.getIcons().add(new Image(PathEnum.IMAGES_PATH + "mistersoftlogo.png"));
             cadastroUsuarioStage.setResizable(false);
@@ -116,7 +119,15 @@ public class LoginController implements Initializable {
             cadastroUsuarioStage.setTitle("Cadastro de usuário");
             cadastroUsuarioStage.setScene(scene);
             loginStage.close();
-            cadastroUsuarioStage.show();
+
+            CadastroUsuarioController controller = loader.getController();
+            controller.setFormStage(cadastroUsuarioStage);
+
+            cadastroUsuarioStage.showAndWait();
+
+            loginStage.show();
+            limpaForm();
+
         } catch (IOException ex) {
             System.out.println(ex);
         }
@@ -177,6 +188,15 @@ public class LoginController implements Initializable {
 //            }
         } catch (IOException ex) {
         }
+    }
+
+    private void limpaForm() {
+        jtxEmail.resetValidation();
+        jpwSenha.resetValidation();
+        jtxEmail.clear();
+        jpwSenha.clear();
+        jtxEmail.requestFocus();
+
     }
 
 }
