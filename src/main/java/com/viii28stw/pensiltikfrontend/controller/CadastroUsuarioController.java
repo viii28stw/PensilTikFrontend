@@ -1,17 +1,16 @@
 package com.viii28stw.pensiltikfrontend.controller;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import com.jfoenix.validation.ValidationFacade;
-import com.viii28stw.pensiltikfrontend.enumeration.MenuEnum;
 import com.viii28stw.pensiltikfrontend.enumeration.SexoEnum;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
-import com.viii28stw.pensiltikfrontend.model.domain.FormMenu;
+import com.viii28stw.pensiltikfrontend.model.dto.UsuarioDto;
 import com.viii28stw.pensiltikfrontend.util.EmailValidator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -24,6 +23,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.swing.*;
 
 @NoArgsConstructor
 public class CadastroUsuarioController implements Initializable {
@@ -197,20 +198,63 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void jbtnSalvarAction() {
-        jpwConfirmarSenha.getValidators().forEach(validatorBase -> {
-            System.out.println(validatorBase.getMessage());
-        });
+        if(!validaCampos()) return;
 
+        UsuarioDto usuarioDto = UsuarioDto.builder()
+                .nome(jtxNome.getText().trim())
+                .sobreNome(jtxSobrenome.getText().trim())
+                .sexoEnum(jcbxSexo.getValue())
+                .email(jtxEmail.getText().trim())
+                .senha(jpwSenha.getText().trim())
+                .build();
 
+        JOptionPane.showMessageDialog(null, usuarioDto);
 
-        System.out.println("Após a limpa");
+        formStage.close();
+    }
 
-        jpwConfirmarSenha.getValidators().forEach(validatorBase -> {
-            System.out.println(validatorBase.getMessage());
-        });
+    private boolean validaCampos() {
+        int campo = 0;
 
-        jpwConfirmarSenha.getValidators().add(confirmarSenhaValidatorCampoObrigatorio);
-        jpwConfirmarSenha.validate();
+        if(!jtxNome.validate()) {
+            campo = 1;
+        }
+        if(!jtxSobrenome.validate()) {
+            if(campo == 0) campo = 2;
+        }
+        if(jcbxSexo.getValue() == null) {
+            lblSexoSelecaoObrigatorio.setVisible(true);
+            imgvwSexoSelecaoObrigatorio.setVisible(true);
+            if(campo == 0) campo = 3;
+        }
+        if(!jtxEmail.validate()) {
+            if(campo == 0) campo = 4;
+        } else if (!EmailValidator.getInstance().validaEmail(jtxEmail.getText().trim())) {
+            lblEmailInvalido.setVisible(true);
+            imgvwEmailInvalido.setVisible(true);
+            if(campo == 0) campo = 4;
+        }
+        if(!jpwSenha.validate()) {
+            if(campo == 0) campo = 5;
+        }
+        if(!jpwConfirmarSenha.validate()) {
+            if(campo == 0) campo = 6;
+        } else if (!jpwSenha.getText().equals(jpwConfirmarSenha.getText())) {
+            lblConfirmarSenhaNaoCorresponde.setVisible(true);
+            imgvwConfirmarSenhaNaoCorresponde.setVisible(true);
+            if(campo == 0) campo = 6;
+        }
+
+        switch (campo) {
+            case 1: jtxNome.requestFocus(); return false;
+            case 2: jtxSobrenome.requestFocus(); return false;
+            case 3: jcbxSexo.requestFocus(); return false;
+            case 4: jtxEmail.requestFocus(); return false;
+            case 5: jpwSenha.requestFocus(); return false;
+            case 6: jpwConfirmarSenha.requestFocus(); return false;
+            case 0: return true;
+            default: return false;
+        }
     }
 
     @FXML

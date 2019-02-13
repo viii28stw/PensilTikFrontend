@@ -1,20 +1,13 @@
 
-W
-squid:S106É"9Replace this use of System.out or System.err by a logger.(Ô¢‰“8êˆ¶÷-
-W
-squid:S106Ñ"9Replace this use of System.out or System.err by a logger.(Ô¢‰“8êˆ¶÷-
-Ksquid:S1602È",Remove useless curly braces around statement(™öûÇ8êˆ¶÷-
-Gsquid:S1604‚"(Make this anonymous inner class a lambda(ç¿—8…Úš÷-
-W
-squid:S106Î"9Replace this use of System.out or System.err by a logger.(„œ×™8êˆ¶÷-
-usquid:S3776U"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ÛŒ¦…ıÿÿÿÿ8Ú²âº-
-Ksquid:S1602Ğ",Remove useless curly braces around statement(™öûÇ8êˆ¶÷-
-Gsquid:S1604£"(Make this anonymous inner class a lambda(ÚÁÀ8êˆ¶÷-
-}squid:UselessImportCheck"RRemove this unused import 'com.viii28stw.pensiltikfrontend.model.domain.FormMenu'.(ªÌÏ8ßºÑù-
-|squid:UselessImportCheck"QRemove this unused import 'com.viii28stw.pensiltikfrontend.enumeration.MenuEnum'.(£®°8ßºÑù-
-Lsquid:S1604«"(Make this anonymous inner class a lambda(©­áÿÿÿÿÿÿ8êˆ¶÷-
-Fsquid:S1604z"(Make this anonymous inner class a lambda(ˆê¤8…Úš÷-
-{squid:S1192d"XDefine a constant instead of duplicating this literal "-fx-text-fill: #c00d0d;" 3 times.(üªïşùÿÿÿÿ8ÃÒŞÇ-
-osquid:UselessImportCheck"DRemove this unused import 'com.jfoenix.validation.ValidationFacade'.(ƒà×ƒ8ÃİÉº-
-Fsquid:S1604r"(Make this anonymous inner class a lambda(½¶½Ş8è¸ÛÇ-
-Lsquid:S1604"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8…Úš÷-
+{squid:S1192e"XDefine a constant instead of duplicating this literal "-fx-text-fill: #c00d0d;" 3 times.(üªïşùÿÿÿÿ8ÃÒŞÇ-
+Fsquid:S1604{"(Make this anonymous inner class a lambda(ˆê¤8…Úš÷-
+Gsquid:S1604¤"(Make this anonymous inner class a lambda(ÚÁÀ8êˆ¶÷-
+Lsquid:S1604‘"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8…Úš÷-
+Lsquid:S1604¬"(Make this anonymous inner class a lambda(©­áÿÿÿÿÿÿ8êˆ¶÷-
+Nsquid:S1066ß"/Merge this if statement with the enclosing one.(ğ˜¨í8§Ï¦-
+Gsquid:S1604ƒ"(Make this anonymous inner class a lambda(ç¿—8…Úš÷-
+Ssquid:S1066î"/Merge this if statement with the enclosing one.(õãÚÆûÿÿÿÿ8ëÑ¦-
+Fsquid:S1604s"(Make this anonymous inner class a lambda(½¶½Ş8è¸ÛÇ-
+^squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8©ëÇ¦-
+usquid:S3776V"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ÛŒ¦…ıÿÿÿÿ8Ú²âº-
+qsquid:S3776Ø"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ú«‡“8º¾¦-

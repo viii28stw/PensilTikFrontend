@@ -3,10 +3,8 @@ package com.viii28stw.pensiltikfrontend.enumeration;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author Plamedi L. Lusembo
