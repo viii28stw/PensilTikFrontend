@@ -210,7 +210,8 @@ public class CadastroUsuarioController implements Initializable {
 
         JOptionPane.showMessageDialog(null, usuarioDto);
 
-        formStage.close();
+        limpaCampos();
+
     }
 
     private boolean validaCampos() {
@@ -259,6 +260,10 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void jbtnLimparAction() {
+        limpaCampos();
+    }
+
+    private void limpaCampos() {
         modoEdicao = false;
 
         jtxNome.resetValidation();
@@ -286,7 +291,6 @@ public class CadastroUsuarioController implements Initializable {
         jtxNome.requestFocus();
 
         jbtnSalvar.setText("SALVAR");
-
     }
 
     @FXML
