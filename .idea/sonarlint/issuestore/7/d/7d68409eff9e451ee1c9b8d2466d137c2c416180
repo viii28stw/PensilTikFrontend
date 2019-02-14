@@ -1,22 +1,22 @@
 
-|squid:UselessImportCheck"QRemove this unused import 'com.viii28stw.pensiltikfrontend.enumeration.MenuEnum'.(£®°8†ØÖ-
-osquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(Íûïÿÿÿÿÿ8òÎã¤-
-osquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(åñµŠüÿÿÿÿ8òÎã¤-
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(·‡³ìıÿÿÿÿ8òÎã¤-
 jsquid:CommentedOutCodeLine°"<This block of commented-out lines of code should be removed.(ğÍËÔ8òÎã¤-
-Fsquid:S1604P"(Make this anonymous inner class a lambda(ÚÁÀ8òÎã¤-
-lsquid:S1871•"MThis branch's code block is the same as the block for the branch on line 146.(Ğ½ö®8òÎã¤-
 W
 squid:S106„"9Replace this use of System.out or System.err by a logger.(ö¬8òÎã¤-
-jsquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(¸ÖÃ¶8òÎã¤-
+Fsquid:S1604P"(Make this anonymous inner class a lambda(ÚÁÀ8òÎã¤-
+jsquid:CommentedOutCodeLineº"<This block of commented-out lines of code should be removed.(¡Õ±š8òÎã¤-
+lsquid:S1871•"MThis branch's code block is the same as the block for the branch on line 146.(Ğ½ö®8òÎã¤-
+nsquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(™ƒÙıÿÿÿÿ8û«ã¦-
+Ksquid:S1604H"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8òÎã¤-
+Isquid:S00108½")Either remove or fill this block of code.(Ãôş•8òÎã¤-
+asquid:S1854­"BRemove this useless assignment to local variable "mainController".(øœ¬8òÎã¤-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(·‡³ìıÿÿÿÿ8òÎã¤-
 Rsquid:S1481­"3Remove this unused "mainController" local variable.(øœ¬8òÎã¤-
+|squid:UselessImportCheck"QRemove this unused import 'com.viii28stw.pensiltikfrontend.enumeration.MenuEnum'.(£®°8†ØÖ-
+Osquid:S1905r",Remove this unnecessary cast to "StackPane".(¯ïÓúÿÿÿÿÿ8Ößšú-
+jsquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(¸ÖÃ¶8òÎã¤-
+osquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(åñµŠüÿÿÿÿ8òÎã¤-
+isquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(€Ë„8òÎã¤-
+osquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(Íûïÿÿÿÿÿ8òÎã¤-
+_squid:UselessImportCheck";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ
 isquid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(¿ËÅµ8ßªâ¦-
 Vsquid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ
-_squid:UselessImportCheck";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ
-Osquid:S1905r",Remove this unnecessary cast to "StackPane".(¯ïÓúÿÿÿÿÿ8Ößšú-
-Isquid:S00108½")Either remove or fill this block of code.(Ãôş•8òÎã¤-
-Ksquid:S1604H"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8òÎã¤-
-jsquid:CommentedOutCodeLineº"<This block of commented-out lines of code should be removed.(¡Õ±š8òÎã¤-
-nsquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(™ƒÙıÿÿÿÿ8û«ã¦-
-asquid:S1854­"BRemove this useless assignment to local variable "mainController".(øœ¬8òÎã¤-
-isquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(€Ë„8òÎã¤-

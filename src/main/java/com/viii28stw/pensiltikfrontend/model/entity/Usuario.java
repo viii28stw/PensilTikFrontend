@@ -25,6 +25,5 @@ public class Usuario implements Serializable {
     private String email;
     private String senha;
     private SexoEnum sexoEnum;
-    private DateTime dataNascimento;
 
 }

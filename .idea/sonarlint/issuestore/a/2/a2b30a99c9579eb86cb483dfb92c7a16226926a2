@@ -1,13 +1,13 @@
 
-{squid:S1192e"XDefine a constant instead of duplicating this literal "-fx-text-fill: #c00d0d;" 3 times.(üªïşùÿÿÿÿ8ÃÒŞÇ-
-Fsquid:S1604{"(Make this anonymous inner class a lambda(ˆê¤8…Úš÷-
-Gsquid:S1604¤"(Make this anonymous inner class a lambda(ÚÁÀ8êˆ¶÷-
-Lsquid:S1604‘"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8…Úš÷-
-Lsquid:S1604¬"(Make this anonymous inner class a lambda(©­áÿÿÿÿÿÿ8êˆ¶÷-
-Nsquid:S1066ß"/Merge this if statement with the enclosing one.(ğ˜¨í8§Ï¦-
-Gsquid:S1604ƒ"(Make this anonymous inner class a lambda(ç¿—8…Úš÷-
 Ssquid:S1066î"/Merge this if statement with the enclosing one.(õãÚÆûÿÿÿÿ8ëÑ¦-
 Fsquid:S1604s"(Make this anonymous inner class a lambda(½¶½Ş8è¸ÛÇ-
-^squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8©ëÇ¦-
 usquid:S3776V"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ÛŒ¦…ıÿÿÿÿ8Ú²âº-
+Fsquid:S1604{"(Make this anonymous inner class a lambda(ˆê¤8…Úš÷-
+Lsquid:S1604¬"(Make this anonymous inner class a lambda(©­áÿÿÿÿÿÿ8êˆ¶÷-
+Gsquid:S1604ƒ"(Make this anonymous inner class a lambda(ç¿—8…Úš÷-
+^squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8©ëÇ¦-
+{squid:S1192e"XDefine a constant instead of duplicating this literal "-fx-text-fill: #c00d0d;" 3 times.(üªïşùÿÿÿÿ8ÃÒŞÇ-
 qsquid:S3776Ø"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ú«‡“8º¾¦-
+Nsquid:S1066ß"/Merge this if statement with the enclosing one.(ğ˜¨í8§Ï¦-
+Lsquid:S1604‘"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8…Úš÷-
+Gsquid:S1604¤"(Make this anonymous inner class a lambda(ÚÁÀ8êˆ¶÷-
