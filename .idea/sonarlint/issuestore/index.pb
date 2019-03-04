@@ -41,3 +41,5 @@ j
 Tsrc/main/java/com/viii28stw/pensiltikfrontend/controller/SplashScreenController.java,c\b\cb7446c7524b1928ea039e38433d2a5e1a73acf1
 v
 Fsrc/main/java/com/viii28stw/pensiltikfrontend/util/EmailValidator.java,c\a\ca2000bda165e8120c1beca421fd7c70e1a068e4
+t
+Dsrc/main/java/com/viii28stw/pensiltikfrontend/util/Notificacoes.java,8\9\8944bc05e2429385041011c37b806ccf66bffbf7

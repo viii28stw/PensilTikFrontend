@@ -1,17 +1,14 @@
 package com.viii28stw.pensiltikfrontend.controller;
 
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.*;
 import com.viii28stw.pensiltikfrontend.enumeration.SexoEnum;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.viii28stw.pensiltikfrontend.model.dto.UsuarioDto;
 import com.viii28stw.pensiltikfrontend.util.EmailValidator;
+import com.viii28stw.pensiltikfrontend.util.Notificacoes;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -23,8 +20,6 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.swing.*;
 
 @NoArgsConstructor
 public class CadastroUsuarioController implements Initializable {
@@ -72,6 +67,11 @@ public class CadastroUsuarioController implements Initializable {
     private Label lblConfirmarSenhaNaoCorresponde;
     @FXML
     private ImageView imgvwConfirmarSenhaNaoCorresponde;
+    @FXML
+    private Label lblNotificacao;
+    @FXML
+    private ImageView imgvwNotificacao;
+    private Notificacoes notificacoes;
 
     private static CadastroUsuarioController uniqueInstance;
 
@@ -108,6 +108,11 @@ public class CadastroUsuarioController implements Initializable {
         lblConfirmarSenhaNaoCorresponde.setVisible(false);
         lblConfirmarSenhaNaoCorresponde.setStyle("-fx-text-fill: #c00d0d;");
         imgvwConfirmarSenhaNaoCorresponde.setVisible(false);
+
+        lblNotificacao.setVisible(false);
+        imgvwNotificacao.setVisible(false);
+
+        notificacoes = new Notificacoes(imgvwNotificacao, lblNotificacao);
 
         SexoEnum.list().forEach(obsListSexo::add);
         jcbxSexo.setItems(obsListSexo);
@@ -208,7 +213,7 @@ public class CadastroUsuarioController implements Initializable {
                 .senha(jpwSenha.getText().trim())
                 .build();
 
-        JOptionPane.showMessageDialog(null, usuarioDto);
+        notificacoes.notificaSalvo();
 
         limpaCampos();
 

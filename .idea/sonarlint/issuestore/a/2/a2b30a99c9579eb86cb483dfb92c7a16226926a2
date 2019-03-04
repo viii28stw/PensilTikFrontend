@@ -1,13 +1,14 @@
 
-Ssquid:S1066î"/Merge this if statement with the enclosing one.(õãÚÆûÿÿÿÿ8ëÑ¦-
-Fsquid:S1604s"(Make this anonymous inner class a lambda(½¶½Ş8è¸ÛÇ-
-usquid:S3776V"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ÛŒ¦…ıÿÿÿÿ8Ú²âº-
-Fsquid:S1604{"(Make this anonymous inner class a lambda(ˆê¤8…Úš÷-
-Lsquid:S1604¬"(Make this anonymous inner class a lambda(©­áÿÿÿÿÿÿ8êˆ¶÷-
-Gsquid:S1604ƒ"(Make this anonymous inner class a lambda(ç¿—8…Úš÷-
-^squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8©ëÇ¦-
-{squid:S1192e"XDefine a constant instead of duplicating this literal "-fx-text-fill: #c00d0d;" 3 times.(üªïşùÿÿÿÿ8ÃÒŞÇ-
-qsquid:S3776Ø"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ú«‡“8º¾¦-
-Nsquid:S1066ß"/Merge this if statement with the enclosing one.(ğ˜¨í8§Ï¦-
-Lsquid:S1604‘"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8…Úš÷-
-Gsquid:S1604¤"(Make this anonymous inner class a lambda(ÚÁÀ8êˆ¶÷-
+Ssquid:S1481Ğ"/Remove this unused "usuarioDto" local variable.(ø’€€øÿÿÿÿ8Ö -
+bsquid:S1854Ğ">Remove this useless assignment to local variable "usuarioDto".(ø’€€øÿÿÿÿ8Ö -
+usquid:S3776V"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ÛŒ¦…ıÿÿÿÿ8Ö -
+Fsquid:S1604x"(Make this anonymous inner class a lambda(½¶½Ş8Ö -
+Gsquid:S1604ˆ"(Make this anonymous inner class a lambda(ç¿—8Ö -
+Lsquid:S1604–"(Make this anonymous inner class a lambda(å­ßÁúÿÿÿÿ8Ö -
+{squid:S1192e"XDefine a constant instead of duplicating this literal "-fx-text-fill: #c00d0d;" 3 times.(üªïşùÿÿÿÿ8Ö -
+Ssquid:S1066ô"/Merge this if statement with the enclosing one.(õãÚÆûÿÿÿÿ8Ö -
+Nsquid:S1066å"/Merge this if statement with the enclosing one.(ğ˜¨í8Ö -
+Gsquid:S1604€"(Make this anonymous inner class a lambda(ˆê¤8Ö -
+Lsquid:S1604±"(Make this anonymous inner class a lambda(©­áÿÿÿÿÿÿ8Ö -
+Gsquid:S1604©"(Make this anonymous inner class a lambda(ÚÁÀ8Ö -
+qsquid:S3776Ş"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ú«‡“8Ö -

@@ -1,0 +1,5 @@
+
+Vsquid:S11727"3Remove this unused method parameter "iconResource".(ı¨î˜ıÿÿÿÿ8¿Á¡¡-
+Msquid:S00108D")Either remove or fill this block of code.(è®ã¶øÿÿÿÿ8é¡-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ŸìÍÉ8ÛˆÕ¡-
+isquid:S2142D"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ8é¡-

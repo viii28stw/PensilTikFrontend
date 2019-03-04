@@ -91,6 +91,12 @@
                   </ImageView>
                </children>
             </HBox>
+             <HBox alignment="CENTER_RIGHT" layoutX="363.0" layoutY="372.0" prefHeight="20.0" prefWidth="259.0" spacing="7.0">
+                 <children>
+                     <ImageView fx:id="imgvwNotificacao" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     <Label fx:id="lblNotificacao" styleClass="label-notificacao" text="Imprimindo..." />
+                 </children>
+             </HBox>
          </children>
       </AnchorPane>  
    </children>
