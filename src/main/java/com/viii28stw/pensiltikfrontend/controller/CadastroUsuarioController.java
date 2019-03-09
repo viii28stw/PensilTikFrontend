@@ -25,7 +25,7 @@ import lombok.Setter;
 public class CadastroUsuarioController implements Initializable {
 
     @Setter
-    private Stage formStage;
+    private Stage cadastroUsuarioStage;
     @FXML
     private JFXTextField jtxNome;
     @FXML
@@ -72,15 +72,6 @@ public class CadastroUsuarioController implements Initializable {
     @FXML
     private ImageView imgvwNotificacao;
     private Notificacoes notificacoes;
-
-    private static CadastroUsuarioController uniqueInstance;
-
-    public static synchronized CadastroUsuarioController getInstance() {
-        if (uniqueInstance == null) {
-            uniqueInstance = new CadastroUsuarioController();
-        }
-        return uniqueInstance;
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -300,7 +291,7 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void jbtnFecharAction() {
-        formStage.close();
+        cadastroUsuarioStage.close();
     }
 
 }

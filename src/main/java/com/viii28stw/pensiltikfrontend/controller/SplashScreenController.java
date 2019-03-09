@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lombok.Setter;
 
 /**
  * @author Plamedi L. Lusembo
@@ -22,6 +23,8 @@ import javafx.stage.Stage;
 
 public class SplashScreenController implements Initializable {
 
+    @Setter
+    private Stage splashScreenStage;
     @FXML
     private Label lblVersao;
 
@@ -53,15 +56,22 @@ public class SplashScreenController implements Initializable {
         service.setOnSucceeded((WorkerStateEvent event) -> {
             try {
                 Stage loginStage = new Stage();
-                Stage splashStage = (Stage) lblVersao.getScene().getWindow();
-                AnchorPane loginAnchorPane = FXMLLoader.load(MainApp.class.getResource("/view/login.fxml"));
+
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(MainApp.class.getResource("/view/login.fxml"));
+                AnchorPane loginAnchorPane = loader.load();
+
                 Scene scene = new Scene(loginAnchorPane);
-//                loginStage.getIcons().add(new Image(PathEnum.IMAGES_PATH + "mistersoftlogo.png"));
+                loginStage.setTitle("Login");
                 loginStage.setResizable(false);
                 loginStage.setMaximized(false);
-                loginStage.setTitle("Login");
                 loginStage.setScene(scene);
-                splashStage.close();
+
+                splashScreenStage.close();
+
+                LoginController controller = loader.getController();
+                controller.setLoginStage(loginStage);
+
                 loginStage.show();
             } catch (IOException ex) {
             }

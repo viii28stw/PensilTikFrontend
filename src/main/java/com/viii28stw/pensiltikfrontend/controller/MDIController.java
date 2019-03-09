@@ -2,24 +2,14 @@ package com.viii28stw.pensiltikfrontend.controller;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.ClipboardOwner;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.viii28stw.pensiltikfrontend.MainApp;
 import com.viii28stw.pensiltikfrontend.controller.ajuda.SobreController;
 import com.viii28stw.pensiltikfrontend.enumeration.MenuEnum;
@@ -36,28 +26,23 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.stage.FileChooser;
-import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-
-import javax.annotation.PostConstruct;
 
 /**
  * @author Plamedi L. Lusembo
  */
 
 @NoArgsConstructor
-public class MDIController implements Initializable {
-
-    private Stage mainLayoutStage;
+public class    MDIController implements Initializable {
+    @Setter
+    private Stage mDIStage;
     public static List<FormMenu> lstFormsMenu;
     @FXML
     private Hyperlink hlkNomeUsuario;
@@ -74,30 +59,8 @@ public class MDIController implements Initializable {
     @Autowired
     private UsuarioLogado usuarioLogado;
 
-    private static MDIController uniqueInstance;
-
-    public static synchronized MDIController getInstance() {
-        if (uniqueInstance == null) {
-            uniqueInstance = new MDIController();
-        }
-        return uniqueInstance;
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-//        mnConfiguracoes.getItems().stream().filter((mi) -> (mi.getId().equals("CFG001")))
-//                .forEachOrdered((mi) -> {
-//                    mi.setVisible(false);
-//                });
-//        if (UsuarioLogado.getInstance().getUsuario().getGrupoUsuario().getCdGrupoUsuario() != 1) {
-//
-//            mnCadastro.getItems().stream().filter((mi) -> (mi.getId().equals("SPRT")
-//                    || mi.getId().equals("CAD005") || mi.getId().equals("CAD006")))
-//                    .forEachOrdered((mi) -> {
-//                        mi.setVisible(false);
-//                    });
-//        }
 
 //        hlkNomeUsuario.setText(String.format("%s (%s)", usuarioLogado.getUsuario().getNome(), usuarioLogado.getUsuario().getEmail()));
 
@@ -182,22 +145,7 @@ public class MDIController implements Initializable {
 
     //--- *** ----- ### ----- *** ---
     @FXML
-    private void hlkSairOnAction() {
-        try {
-            Stage loginStage = new Stage();
-            mainLayoutStage = (Stage) hlkNomeUsuario.getScene().getWindow();
-            AnchorPane loginAnchorPane = FXMLLoader.load(MainApp.class.getResource("/view/login.fxml"));
-            Scene scene = new Scene(loginAnchorPane);
-            loginStage.setResizable(false);
-            loginStage.setMaximized(false);
-            loginStage.setTitle("Login");
-            loginStage.setScene(scene);
-            loginStage.show();
-            mainLayoutStage.close();
-
-        } catch (IOException ex) {
-        }
-    }
+    private void hlkSairOnAction() { mDIStage.close(); }
 
     private void abreForm(MenuEnum menum, String arquivofxml, String icone, double x, double y) {
         boolean aberto = false;

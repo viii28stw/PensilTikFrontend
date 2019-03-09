@@ -1,5 +1,6 @@
 package com.viii28stw.pensiltikfrontend;
 
+import com.viii28stw.pensiltikfrontend.controller.SplashScreenController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,11 +20,19 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Stage splashScreenStage = new Stage();
-        StackPane splashLayoutPane = FXMLLoader.load(getClass().getResource("/view/splash-screen.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/view/splash-screen.fxml"));
+        StackPane splashLayoutPane = loader.load();
+
         Scene scene = new Scene(splashLayoutPane);
+        splashScreenStage.setTitle("Carregando...");
         splashScreenStage.setResizable(false);
         splashScreenStage.setMaximized(false);
         splashScreenStage.setScene(scene);
+
+        SplashScreenController controller = loader.getController();
+        controller.setSplashScreenStage(splashScreenStage);
+
         splashScreenStage.show();
     }
 }
